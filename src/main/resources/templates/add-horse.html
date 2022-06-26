@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Добавление лошади</title>
+</head>
+<body>
+<div style="text-align: center;">
+    <form action="#" th:action="@{/add_horse}" th:object="${horse}" method="post">
+        <fieldset>
+            <legend>Информация о лошади</legend>
+            <label>
+                Масть:
+                <select name="type" th:field="*{type}">
+                    <option value="Гнедая">Гнедая</option>
+                    <option value="Вороная">Вороная</option>
+                    <option value="Серая">Серая</option>
+                    <option value="Рыжая">Рыжая</option>
+                </select>
+            </label>
+            <label for="age">Возраст</label>
+            <input type="text" th:field="*{age}" id="age" required placeholder="Например, 5">
+            <label for="price">Цена</label>
+            <input type="text" th:field="*{price}" id="price" required placeholder="Например, 5000">
+            <input type="submit" value="Сохранить">
+        </fieldset>
+    </form>
+</div>
+</body>
+</html>

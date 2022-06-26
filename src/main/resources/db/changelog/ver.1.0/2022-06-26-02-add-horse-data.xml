@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
+
+    <changeSet id="1" author="Alex">
+        <comment>add horse data</comment>
+        <sql>
+            insert into horse(type, age, price) values
+            ('Рыжая', '3', "10000");
+            insert into horse(type, age, price) values
+            ('Вороная', '6', "7000");
+            insert into horse(type, age, price) values
+            ('Серая', '5', "8000");
+            insert into horse(type, age, price) values
+            ('Гнедая', '4', "9000");
+        </sql>
+    </changeSet>
+
+
+</databaseChangeLog>
