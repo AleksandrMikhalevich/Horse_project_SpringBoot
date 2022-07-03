@@ -6,7 +6,7 @@
 </head>
 <body>
 <div style="text-align: center;">
-    <form action="#" th:action="@{/update/{id}(id=${horse.id})}" th:object="${horse}" method="post">
+    <form th:action="@{/update/{id}(id=${horse.id})}" th:object="${horse}" method="post">
         <fieldset>
             <legend>Информация о лошади</legend>
             <label>
@@ -26,7 +26,7 @@
         </fieldset>
     </form>
     <p>
-        <a href="/index">Назад</a>
+        <a href="/">Назад</a>
     </p>
 </div>
 </body>

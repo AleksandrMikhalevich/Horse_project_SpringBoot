@@ -27,7 +27,7 @@ public class HorseController {
     @PostMapping("/add_horse")
     public String addHorse(Horse horse) {
         horseService.addHorse(horse);
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @GetMapping("/edit/{id}")
@@ -40,22 +40,17 @@ public class HorseController {
     @PostMapping("/update/{id}")
     public String updateHorse(Horse horse) {
         horseService.updateHorse(horse);
-        return "redirect:/index";
+        return "redirect:/";
     }
 
     @GetMapping("/delete/{id}")
     public String deleteHorse(@PathVariable("id") int id) {
         horseService.deleteHorse(id);
-        return "redirect:/index";
-    }
-    @GetMapping("/index")
-    public String showAllHorses(Model model) {
-        model.addAttribute("horses", horseService.getAllHorses());
-        return "index";
+        return "redirect:/";
     }
 
     @GetMapping("/")
-    public String showDBHorses(Model model) {
+    public String showAllHorses(Model model) {
         model.addAttribute("horses", horseService.getAllHorses());
         return "index";
     }
